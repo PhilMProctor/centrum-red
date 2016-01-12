@@ -1,0 +1,29 @@
+{% extends "base.html" %} 
+{% block content %}
+<div class="section no-pad-bot">
+	<div class="container">
+		<br>
+		<br>
+		<h3 class="header center red-text text-lighten-2">Dashboard</h3>
+		<div class="row center">
+		{% for config in switch_config %}
+			<div class="col s12 m4">
+				<div class="card red darken-3">
+					<div class="card-content white-text">
+						<span class="card-title">{{config[0]}}</span>
+					</div>
+					<div class="card-action">
+						{% if config[] == 0 %}
+              			<a href="#"><i class="fa fa-toggle-off fa-2x fa-rotate-90"></i></a>
+						{% else %}
+						<a href="#"><i class="fa fa-toggle-on fa-2x fa-rotate-90"></i></a>
+						{% endif %}
+            		</div>
+				</div>
+		
+			</div>
+		{% endfor %}
+		</div>
+	</div>
+</div>
+{% endblock content %}

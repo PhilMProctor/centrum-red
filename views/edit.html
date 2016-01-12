@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+{% for switchVal in switchVals %}
+<form action="" method="post">
+<fieldset>
+	<input type="hidden" name="switchID" id="switchID" value="{{switchVal[0]}}">
+	<label>Switch Name</label>
+	<input type="text" name="switchName" id="switchName" value="{{switchVal[1]}}"/>
+	<br>
+	<label>Switch Description</label>
+	<input type="text" name="description" id="description" value="{{switchVal[2]}}"/>
+	<br>
+	<label>Switch Location</label>
+	<input type="text" name="location" id="location" value="{{switchVal[3]}}"/>
+	<br>
+	<label>Switch Category</label>
+	<input type="text" name="cat" id="cat" value="{{switchVal[4]}}"/>
+	<br>
+	<label>Switch Num (0)</label>
+	<input type="text" name="switchNum" id="cat" value="{{switchVal[5]}}"/>
+	<br>
+	<label>Switch Num (II)</label>
+	<input type="text" name="switchRnum" id="switchRnum" value="{{switchVal[6]}}"/>
+	<br>
+	<label>Switch On Code</label>
+	<input type="text" name="switchOn" id="switchOn" value="{{switchVal[7]}}"/>
+	<br>
+	<label>Switch Off Code</label>
+	<input type="text" name="switchOff" id="switchOff" value="{{switchVal[8]}}"/>
+		<button type="submit" class="btn btn-success" >Save</button>
+		<button href="/home" class="btn btn-info" >Cancel</button>
+</fieldset>
+</form>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+<div class="row">
+	<div class="col s12">
+		<table class="highlight" class="responsive-table">
+			<thead>
+				<tr>
+					<th data-field="id">Switch No.</th>
+					<th data-field="name">Switch Name</th>
+					<th data-field="description">Description</th>
+					<th data-field="location">Location</th>
+					<th data-field="category">Category</th>
+					<th data-field="active">Active</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for switch in switchset %}
+			<tr>
+			<form action="/switchset" method="post">
+				<td>{{switch[0]}}</td>
+				<td>{{switch[1]}}</td>
+				<td>{{switch[2]}}</td>
+				<td>{{switch[3]}}</td>
+				<td>{{switch[4]}}</td>
+				<td>{{switch[7]}}</td>
+				<td>
+              <input type="hidden" name="switchID" id="switchID" value="{{switch[0]}}">
+                <button type="submit" alt="on" class="btn btn-lg btn-warning">Edit</button></td>
+			</form>
+			</tr>
+			</tbody>
+			{% endfor %}
+	</div>
+</div>
+
+
+{% endblock %}
