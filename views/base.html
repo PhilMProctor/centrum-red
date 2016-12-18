@@ -14,39 +14,30 @@
 </head>
 <body>
  {% block nav %}
- <ul id="dropdown1" class="dropdown-content">
-  <li><a href="switchset">Switches</a></li>
-  <li><a href="#!">Profile</a></li>
-  <li class="divider"></li>
-  <li><a href="/logout">Log Out</a></li>
-</ul>
-<nav class="red darken-3" role="navigation">
+ <nav class="blue darken-4" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="/" class="brand-logo yellow-text text-lighten-3">Centrum-Red</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a class="dropdown-button yellow-text text-lighten-3" href="#" data-activates="dropdown1">Settings<i class="material-icons right">arrow_drop_down</i></a></li>
-      </ul>
-
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link1</a></li>
-        <li><a href="#">Navbar Link2</a></li>
+        <li><a href="#" class="blue-text text-darken-4 waves-effect">Dashboard</a></li>
+        <li><a href="#" class="blue-text text-darken-4 waves-effect">Lights</a></li>
+        <li><a href="#" class="blue-text text-darken-4 waves-effect">Power</a></li>
+        <li><a href="#" class="blue-text text-darken-4 waves-effect">Charts</a></li>
       </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
 </nav>
+<div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only"><i class="mdi-navigation-menu"></i></a></div>
+      <ul id="nav-mobile" class="side-nav fixed">
+        <li class="no-padding"><a href="/" class="white-text waves-effect blue darken-4"><strong>Centrum-Red</strong></a></li>
+        <li class="bold"><a href="#" class="blue-text text-darken-4 waves-effect"><i class="small material-icons">view_quilt</i>Dashboard</a></li>
+        <li class="bold"><a href="#" class="blue-text text-darken-4 waves-effect"><i class="small material-icons">lightbulb_outline</i>Lights</a></li>
+        <li class="bold"><a href="#" class="blue-text text-darken-4 waves-effect"><i class="small material-icons">power_settings_new</i>Power</a></li>
+        <li class="bold"><a href="#" class="blue-text text-darken-4 waves-effect"><i class="small material-icons">assessment</i>Charts</a></li>
+      </ul>
  {% endblock nav %}
 
 {% block content %}
 {% endblock content %}
 
 {% block footer %}
-  <footer class="page-footer red darken-3">
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="yellow-text text-lighten-3" href="#">Techno-Talk</a>
-      </div>
-    </div>
-  </footer>
 {%endblock footer%}
 
 
